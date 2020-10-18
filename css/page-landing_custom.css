@@ -1,0 +1,163 @@
+#page-landing {
+    position: relative;
+    min-height: 100vh;
+}
+
+.search-bar {
+    align-self: center;
+    margin: 2rem 0;
+    
+    border-bottom: 1px solid black;
+
+    width: clamp(25rem, 25vw, 25vw);
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 0.5rem 0.5rem;
+    border: none;
+    flex: 1;
+    font-size: 2.5rem;
+    min-width: 4rem;
+}
+.search-bar input::placeholder {
+    color: lightgray;
+}
+
+.pokemon-index {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 40rem);
+    gap: 2rem 4rem;
+    justify-content: center;
+}
+
+.pokemon-card {
+    text-decoration: none;
+    color: black;
+
+    background: #ebebeb;
+    border: solid black;
+    border-width: 1.5px 0 1.5px 0;
+    border-radius: 3rem;
+    padding: 1.5rem;
+
+    height: 15rem;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.pokemon-card:hover {
+    background: #fff2f2;
+}
+
+/* imagem do pokemon */
+.pokemon-card img {
+    height: 100%;
+    max-width: 40%;
+    margin-right: 2rem;
+}
+
+/* ocupa o resto do espaço */
+.pokemon-info {
+    flex: 1;
+}
+
+.pokemon-info div {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+/* toma todo o espaço, a estrelinha fica so com o que precisa */
+.pokemon-info div strong {
+    flex: 1;
+    font-size: 2rem;
+}
+
+.pokemon-info div img {
+    width: 3rem;
+}
+
+/* espaço entre os elementos */
+.pokemon-info div + div {
+    margin-top: 1rem;
+}
+
+/* ajusta as cores das classes de pokemon */
+.pokemon-info span {
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
+    margin: 0 0.5rem;
+
+    text-transform: uppercase;
+}
+.pokemon-info span.normal {
+    background: #828282;
+}
+.pokemon-info span.grass {
+    background: #27ae60;
+}
+.pokemon-info span.poison {
+    background: #9b51e0;
+}
+
+/* menu de páginas */
+.page-menu {
+    margin: 5rem 0;
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+
+.page-menu span {
+    color: #cc0000;
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    width: 4rem;
+    height: 4rem;
+
+    margin: 0 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    letter-spacing: 0.2rem;
+
+    cursor: pointer;
+}
+.page-menu span.active {
+    background: #cc0000;
+    color: white;
+    border-radius: 50%;
+}
+
+/* mobile */
+@media (max-width: 1055px) {
+    .user-display {
+        bottom: -27rem;
+    }
+
+    .user-display div {
+        flex-direction: column;
+    }
+
+    .user-display div a {
+        line-height: 6rem;
+        font-size: 3rem;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .pokemon-index {
+        grid-template-columns: repeat(auto-fill, 30rem);
+    }
+}

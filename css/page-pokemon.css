@@ -1,0 +1,153 @@
+#page-pokemon {
+    position: relative;
+    min-height: 100vh;
+}
+
+header {
+    margin-bottom: 4rem;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+
+    width: min-content;
+
+    cursor: pointer;
+}
+
+.top * + * {
+    margin-left: 2rem;
+}
+
+.pokemon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon img {
+    width: 30rem;
+    margin-right: 15rem;
+}
+
+.pokemon-info {
+    display: flex;
+    max-width: 50rem;
+    flex-direction: column;
+
+    font-size: 2.4rem;
+}
+
+.pokemon-info > * + * {
+    margin-top: 2rem;
+}
+
+/* Nome do pokemon */
+.pokemon-info h1 {
+    font-size: 6rem;
+    font-weight: 600;
+}
+.pokemon-info h1 small {
+    font-size: 3rem;
+    color: #828282;
+    font-weight: 800;
+}
+
+/* Classes do pokemon */
+.pokemon-info div {
+    line-height: 3.3rem;
+}
+.pokemon-info div span {
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
+    margin-right: 2rem;
+
+    text-transform: uppercase;
+}
+.pokemon-info div span.normal {
+    background: #828282;
+}
+.pokemon-info div span.grass {
+    background: #27ae60;
+}
+.pokemon-info div span.poison {
+    background: #9b51e0;
+}
+
+.pokemon-attributes {
+    align-self: center;
+    margin-bottom: 5rem;
+}
+
+.pokemon-attributes h1 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.pokemon-attributes div {
+    display: grid;
+    grid-template-columns: 30.85rem 30.85rem;
+    align-items: center;
+    justify-content: center;
+
+    width: 60vw;
+
+    gap: 2rem 3rem;
+
+    text-transform: uppercase;
+    font-weight: 600;
+
+    text-align: end;
+}
+
+.att {
+    width: 3rem;
+    height: 3rem;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 50%;
+}
+
+.att.filled {
+    background: #27ae60;
+}
+
+@media (max-width: 1055px) {
+    .top {
+        align-self: center;
+    }
+    
+    .pokemon {
+        flex-direction: column;
+    }
+
+    .pokemon img {
+        width: clamp(20rem, 30vw, 30vw);
+        margin: 5rem 0;
+    }
+
+    .pokemon-info h1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pokemon-info {
+        align-items: center;
+    }
+    
+    .pokemon-attributes h1 {
+        text-align: center;
+    }
+
+    .pokemon-attributes div {
+        grid-template-columns: 30.85rem;
+    }
+
+}

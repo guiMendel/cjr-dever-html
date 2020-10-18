@@ -1,0 +1,124 @@
+header {
+    /* permitem que a imagem do usuário flutue para baixo */
+    position: relative;
+    margin-bottom: 17rem;
+
+    background: linear-gradient(#db4c4c 0%, #cc0000 100%);
+    height: clamp(10rem, 25vh, 40rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* muda a cor dos svgs do header para branco */
+header [src$=".svg"] {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(197deg)
+        brightness(104%) contrast(102%);
+}
+
+.header-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* logo */
+.header-top > img {
+    margin: 1rem 5rem;
+    width: clamp(15rem, 10vw, 40rem);
+}
+
+/* opções do usuário */
+.header-top div {
+    width: 10rem;
+    margin: 1rem 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* tira o underline */
+.header-top div a {
+    text-decoration: none;
+}
+
+/* ajusta as imagens das opções */
+.header-top div img {
+    margin: auto;
+    width: 3rem;
+}
+
+.user-display {
+    height: 35rem;
+
+    position: absolute;
+    bottom: -17rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-display h1 {
+    color: white;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+}
+.user-display img {
+    border-radius: 50%;
+    height: 20rem;
+}
+.user-display div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    line-height: 4rem;
+}
+.user-display div a {
+    text-decoration: none;
+
+    padding: 0 2.5rem;
+
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.user-display div a:hover {
+    color: #da4848;
+}
+.user-display div a.active {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+/* coloca uma separação entre os filhos */
+.user-display > * + * {
+    margin-top: 2rem;
+}
+
+@media (max-width: 1055px) {
+    header {
+        height: 40rem;
+        margin-bottom: 38rem;
+    }
+
+    .header-top {
+        flex-direction: column;
+    }
+
+    .header-top > img {
+        width: 30rem;
+    }
+
+    .header-top div {
+        width: 14rem;
+    }
+    .header-top div img {
+        width: 5rem;
+    }
+}
